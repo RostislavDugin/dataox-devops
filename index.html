@@ -12,9 +12,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
-  <body>
+  <body class="overflow-x-hidden">
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 shadow-sm backdrop-blur-sm">
+    <nav
+      class="z-50 border-b border-gray-200 bg-white/95 shadow-sm backdrop-blur-sm md:sticky md:top-0"
+    >
       <div class="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-4">
         <!-- Logo -->
         <a href="#" class="group flex items-center gap-3">
@@ -23,7 +25,9 @@
             alt="Data Ox"
             class="max-h-[40px] transition-transform group-hover:scale-105"
           />
-          <div class="text-2xl font-bold text-gray-800 transition-colors group-hover:text-blue-600">
+          <div
+            class="text-xl font-bold text-gray-800 transition-colors group-hover:text-blue-600 md:text-2xl"
+          >
             DataOx
           </div>
         </a>
@@ -71,7 +75,7 @@
         <!-- Contact Button -->
         <a
           href="#contact"
-          class="transform rounded-lg bg-blue-600 px-6 py-2.5 font-medium text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
+          class="transform rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-medium text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
         >
           Contact Us
         </a>
@@ -119,15 +123,15 @@
     <!-- End of Navbar -->
 
     <!-- Main Section -->
-    <div id="home" class="mx-auto my-[100px] w-full max-w-[1200px]">
-      <section class="flex">
-        <div class="w-[55%]">
-          <h1 class="mb-8 max-w-[650px] text-4xl font-black">
+    <div id="home" class="mx-auto my-[50px] w-full max-w-[1200px] px-6 lg:my-[100px]">
+      <section class="flex flex-col lg:flex-row">
+        <div class="w-full lg:w-[55%]">
+          <h1 class="mb-8 max-w-[650px] text-2xl font-black md:text-4xl">
             <span class="text-blue-600">Put the headache</span> of your app stability
             <span class="text-blue-600">on Data Ox</span> team
           </h1>
 
-          <p class="mb-6 max-w-[550px] text-xl">
+          <p class="mb-6 max-w-[550px] md:text-xl">
             Data Ox 24\7 monitors metrics of your application or scraper. If we see unusual load,
             data losses, breaks or metrics growth - we notify you and
             <span class="underline decoration-blue-600" style="text-decoration-thickness: 3px"
@@ -151,7 +155,7 @@
                 </svg>
               </div>
 
-              <p class="text-lg">
+              <p class="text-base md:text-lg">
                 <span class="font-semibold">saves your DB data</span> from corruption via auto
                 backups;
               </p>
@@ -170,7 +174,7 @@
                 </svg>
               </div>
 
-              <p class="text-lg">
+              <p class="text-base md:text-lg">
                 <span class="font-semibold">tracks availability</span> of your services and servers
                 each minute;
               </p>
@@ -189,7 +193,7 @@
                 </svg>
               </div>
 
-              <p class="text-lg">
+              <p class="text-base md:text-lg">
                 <span class="font-semibold">tracks quality</span> of data to detect scraping
                 websites changes;
               </p>
@@ -208,7 +212,7 @@
                 </svg>
               </div>
 
-              <p class="text-lg">
+              <p class="text-base md:text-lg">
                 <span class="font-semibold">monitors metrics</span> of the app (last launch, CPU
                 load, processes count, etc.) to prevent possible failures in advance.
               </p>
@@ -216,7 +220,7 @@
           </div>
 
           <!-- CTA Buttons -->
-          <div class="flex gap-2">
+          <div class="mb-8 flex flex-col gap-2 sm:flex-row lg:mb-0">
             <button
               class="rounded-lg bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700"
             >
@@ -231,34 +235,42 @@
           </div>
         </div>
 
-        <div class="flex w-[45%] items-center justify-center">
-          <img class="pb-24" src="assets/main-infographics.svg" alt="Data Ox" class="w-full" />
+        <div class="mt-[50px] flex w-full items-center justify-center lg:mt-0 lg:w-[45%]">
+          <img
+            class="w-full max-w-md pb-0 lg:pb-24"
+            src="assets/main-infographics.svg"
+            alt="Data Ox"
+          />
         </div>
       </section>
     </div>
 
     <!-- Availability Section -->
-    <div id="availability" class="bg-gray-50 py-[100px]">
+    <div id="availability" class="bg-gray-50 py-[50px] md:py-[100px]">
       <div class="mx-auto w-full max-w-[1200px] px-6">
-        <div class="grid grid-cols-2 items-center gap-12">
+        <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
-            <div class="flex">
+            <div class="flex justify-center lg:justify-start">
               <div class="mb-6 rounded-[20px] bg-blue-600 px-4 py-1 text-white">Availability</div>
             </div>
 
-            <h2 class="mb-6 text-4xl font-bold">How we track application availability?</h2>
+            <h2 class="mb-6 text-center text-2xl font-bold md:text-4xl lg:text-left">
+              How we track application availability?
+            </h2>
 
-            <p class="mb-8 max-w-[480px] text-lg">
+            <p class="mb-8 text-center text-base md:text-lg lg:max-w-[480px] lg:text-left">
               Our distributed health check system tracks your servers and website availability from
               different locations. In case something not available - we notify you, our team starts
               to fix the issue
             </p>
           </div>
 
-          <div class="rounded-lg bg-red-50 p-8">
-            <div class="mb-2 text-3xl font-bold text-red-600">73% of websites goes down</div>
+          <div class="rounded-lg bg-red-50 p-6 md:p-8">
+            <div class="mb-2 text-center text-2xl font-bold text-red-600 md:text-3xl lg:text-left">
+              73% of websites goes down
+            </div>
 
-            <p class="text-lg">
+            <p class="text-center text-base md:text-lg lg:text-left">
               on average from 5 to 23 times per year due to data center, DDOS,&nbsp;hosters,
               configuration issues, CMS bugs or legal risks
             </p>
@@ -268,7 +280,10 @@
     </div>
 
     <div class="bg-gray-50 pb-[100px]">
-      <div id="map" class="relative mx-auto h-[800px] w-[1200px] rounded-lg bg-gray-50">
+      <div
+        id="map"
+        class="relative mx-auto h-[800px] w-[1200px] overflow-hidden rounded-lg bg-gray-50"
+      >
         <img
           src="assets/usa-down.svg"
           class="absolute left-0 top-0 z-10 ml-[10px] mt-[355px] w-[300px]"
@@ -518,27 +533,27 @@
       }); // end am5.ready()
     </script>
 
-    <div class="bg-gray-50 py-[100px]">
-      <div class="mx-auto max-w-[1200px]">
-        <div class="text-center text-3xl font-bold">
+    <div class="bg-gray-50 py-[50px] md:py-[100px]">
+      <div class="mx-auto max-w-[1200px] px-4 md:px-6">
+        <div class="text-center text-xl font-bold md:text-3xl">
           What Data Ox takes care of in website availability?
         </div>
 
         <!-- Features Grid -->
-        <div class="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="mt-8 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2">
           <!-- Global Monitoring -->
           <div
-            class="group relative overflow-hidden rounded-2xl border border-blue-100 bg-white p-8 transition-all duration-500 hover:scale-[1.02] hover:border-blue-200 hover:shadow-2xl"
+            class="group relative overflow-hidden rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-500 hover:scale-[1.02] hover:border-blue-200 hover:shadow-2xl md:p-8"
           >
             <div
               class="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-blue-100/30"
             ></div>
             <div class="relative">
               <div
-                class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 shadow-lg"
+                class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 shadow-lg md:h-14 md:w-14"
               >
                 <svg
-                  class="h-7 w-7 text-white"
+                  class="h-6 w-6 text-white md:h-7 md:w-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -552,8 +567,8 @@
                 </svg>
               </div>
 
-              <h3 class="mb-3 text-xl font-bold">Global Availability Monitoring</h3>
-              <p class="text-lg">
+              <h3 class="mb-3 text-lg font-bold md:text-xl">Global Availability Monitoring</h3>
+              <p class="text-base md:text-lg">
                 Monitor your services from
                 <span class="font-semibold text-blue-600">32 strategic locations</span> worldwide
                 for complete geographical coverage and instant issue detection. If an issue appear -
@@ -564,17 +579,17 @@
 
           <!-- Performance Analytics -->
           <div
-            class="group relative overflow-hidden rounded-2xl border border-emerald-100 bg-white p-8 transition-all duration-500 hover:scale-[1.02] hover:border-emerald-200 hover:shadow-2xl"
+            class="group relative overflow-hidden rounded-2xl border border-emerald-100 bg-white p-6 transition-all duration-500 hover:scale-[1.02] hover:border-emerald-200 hover:shadow-2xl md:p-8"
           >
             <div
               class="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-transparent to-emerald-100/30"
             ></div>
             <div class="relative">
               <div
-                class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-600 shadow-lg"
+                class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-600 shadow-lg md:h-14 md:w-14"
               >
                 <svg
-                  class="h-7 w-7 text-white"
+                  class="h-6 w-6 text-white md:h-7 md:w-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -588,8 +603,8 @@
                 </svg>
               </div>
 
-              <h3 class="mb-3 text-xl font-bold">Slow Downs Analytics</h3>
-              <p class="text-lg">
+              <h3 class="mb-3 text-lg font-bold md:text-xl">Slow Downs Analytics</h3>
+              <p class="text-base md:text-lg">
                 Track
                 <span class="font-semibold text-emerald-600">real-time performance metrics</span>
                 with detailed response time analysis and comprehensive uptime statistics.
@@ -599,17 +614,17 @@
 
           <!-- SSL Management -->
           <div
-            class="group relative overflow-hidden rounded-2xl border border-amber-100 bg-white p-8 transition-all duration-500 hover:scale-[1.02] hover:border-amber-200 hover:shadow-2xl"
+            class="group relative overflow-hidden rounded-2xl border border-amber-100 bg-white p-6 transition-all duration-500 hover:scale-[1.02] hover:border-amber-200 hover:shadow-2xl md:p-8"
           >
             <div
               class="absolute inset-0 bg-gradient-to-br from-amber-50/50 via-transparent to-amber-100/30"
             ></div>
             <div class="relative">
               <div
-                class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-600 shadow-lg"
+                class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-600 shadow-lg md:h-14 md:w-14"
               >
                 <svg
-                  class="h-7 w-7 text-white"
+                  class="h-6 w-6 text-white md:h-7 md:w-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -623,8 +638,8 @@
                 </svg>
               </div>
 
-              <h3 class="mb-3 text-xl font-bold">SSL Certificate Management</h3>
-              <p class="text-lg">
+              <h3 class="mb-3 text-lg font-bold md:text-xl">SSL Certificate Management</h3>
+              <p class="text-base md:text-lg">
                 Automated SSL monitoring with
                 <span class="font-semibold text-amber-600">advance renewal alerts</span> to prevent
                 certificate expiration issues. This is needed to keep your website accessible via
@@ -635,17 +650,17 @@
 
           <!-- Proactive Notifications -->
           <div
-            class="group relative overflow-hidden rounded-2xl border border-violet-100 bg-white p-8 transition-all duration-500 hover:scale-[1.02] hover:border-violet-200 hover:shadow-2xl"
+            class="group relative overflow-hidden rounded-2xl border border-violet-100 bg-white p-6 transition-all duration-500 hover:scale-[1.02] hover:border-violet-200 hover:shadow-2xl md:p-8"
           >
             <div
               class="absolute inset-0 bg-gradient-to-br from-violet-50/50 via-transparent to-violet-100/30"
             ></div>
             <div class="relative">
               <div
-                class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-600 shadow-lg"
+                class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-600 shadow-lg md:h-14 md:w-14"
               >
                 <svg
-                  class="h-7 w-7 text-white"
+                  class="h-6 w-6 text-white md:h-7 md:w-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -659,8 +674,8 @@
                 </svg>
               </div>
 
-              <h3 class="mb-3 text-xl font-bold">Proactive Notifications</h3>
-              <p class="text-lg">
+              <h3 class="mb-3 text-lg font-bold md:text-xl">Proactive Notifications</h3>
+              <p class="text-base md:text-lg">
                 Get <span class="font-semibold text-violet-600">instant alerts</span> for domain
                 expirations and potential issues before they impact your users or business.
               </p>
@@ -678,9 +693,9 @@
             <div class="mb-6 rounded-[20px] bg-blue-600 px-4 py-1 text-white">Backups</div>
           </div>
 
-          <h2 class="mb-6 text-3xl font-bold">How databases backup works?</h2>
+          <h2 class="mb-6 text-2xl font-bold md:text-3xl">How databases backup works?</h2>
 
-          <p class="mx-auto max-w-[550px] text-xl">
+          <p class="mx-auto max-w-[550px] text-lg md:text-xl">
             Each day we make scheduled backups at ~4 AM to get copy of your DB. In case your server
             is broken, data corrupted or DB is not available - we restore the backup.
           </p>
@@ -688,139 +703,161 @@
 
         <!-- Statistics -->
         <div
-          class="my-16 grid grid-cols-3 gap-8 rounded-[25px] border border-gray-50 bg-white p-12 text-center shadow-lg"
+          class="my-8 grid grid-cols-1 gap-6 rounded-[25px] border border-gray-50 bg-white p-6 text-center shadow-lg md:my-16 md:grid-cols-3 md:gap-8 md:p-12"
         >
           <div>
-            <div class="mb-2 text-4xl font-bold text-red-600">~150B USD</div>
-            <div class="mx-auto max-w-[250px] text-center text-lg text-gray-600">
+            <div class="mb-2 text-3xl font-bold text-red-600 md:text-4xl">~150B USD</div>
+            <div class="mx-auto max-w-[250px] text-center text-base text-gray-600 md:text-lg">
               businesses lost due to data corruption in 2024 year
             </div>
           </div>
 
           <div>
-            <div class="mb-2 text-4xl font-bold text-red-600">each 2nd</div>
-            <div class="mx-auto max-w-[250px] text-center text-lg text-gray-600">
+            <div class="mb-2 text-3xl font-bold text-red-600 md:text-4xl">each 2nd</div>
+            <div class="mx-auto max-w-[250px] text-center text-base text-gray-600 md:text-lg">
               company face the need of data recovering
             </div>
           </div>
 
           <div>
-            <div class="mb-2 text-4xl font-bold text-red-600">35%</div>
-            <div class="mx-auto max-w-[250px] text-center text-lg text-gray-600">
+            <div class="mb-2 text-3xl font-bold text-red-600 md:text-4xl">35%</div>
+            <div class="mx-auto max-w-[250px] text-center text-base text-gray-600 md:text-lg">
               of companies are unable to restore from backup immediately
             </div>
           </div>
         </div>
 
         <!-- Database Support -->
-        <div class="flex">
-          <div class="w-[40%]">
-            <h3 class="mb-3 text-3xl font-bold text-gray-900">Databases we are backing up</h3>
-            <p class="mb-8 mt-1 text-lg text-gray-600">
+        <div class="flex flex-col lg:flex-row">
+          <div class="w-full lg:w-[40%]">
+            <h3 class="mb-3 text-2xl font-bold text-gray-900 md:text-3xl">
+              Databases we are backing&nbsp;up
+            </h3>
+            <p class="mb-8 mt-1 text-base text-gray-600 md:text-lg">
               We save and secure data for all major databases
             </p>
 
-            <div class="grid grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
               <!-- PostgreSQL Card -->
               <div
-                class="group rounded-xl border-2 border-blue-100 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
+                class="group rounded-xl border-2 border-blue-100 bg-white p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl sm:p-8"
               >
                 <div class="mb-4 flex justify-center">
                   <div
-                    class="rounded-full bg-blue-50 p-4 transition-colors duration-300 group-hover:bg-blue-100"
+                    class="rounded-full bg-blue-50 p-3 transition-colors duration-300 group-hover:bg-blue-100 sm:p-4"
                   >
-                    <img src="assets/postgresql.svg" class="h-12 w-12" alt="PostgreSQL" />
+                    <img
+                      src="assets/postgresql.svg"
+                      class="h-10 w-10 sm:h-12 sm:w-12"
+                      alt="PostgreSQL"
+                    />
                   </div>
                 </div>
-                <h4 class="mb-2 text-xl font-bold text-gray-900">PostgreSQL</h4>
-                <p class="text-sm text-gray-600">Advanced open source relational database</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-900 sm:text-xl">PostgreSQL</h4>
+                <p class="text-xs text-gray-600 sm:text-sm">
+                  Advanced open source relational database
+                </p>
               </div>
 
               <!-- MySQL Card -->
               <div
-                class="group rounded-xl border-2 border-orange-100 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-xl"
+                class="group rounded-xl border-2 border-orange-100 bg-white p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-xl sm:p-8"
               >
                 <div class="mb-4 flex justify-center">
                   <div
-                    class="rounded-full bg-orange-50 p-4 transition-colors duration-300 group-hover:bg-orange-100"
+                    class="rounded-full bg-orange-50 p-3 transition-colors duration-300 group-hover:bg-orange-100 sm:p-4"
                   >
-                    <img src="assets/mysql.svg" class="h-12 w-12" alt="MySQL" />
+                    <img src="assets/mysql.svg" class="h-10 w-10 sm:h-12 sm:w-12" alt="MySQL" />
                   </div>
                 </div>
-                <h4 class="mb-2 text-xl font-bold text-gray-900">MySQL</h4>
-                <p class="text-sm text-gray-600">World's most popular open source database</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-900 sm:text-xl">MySQL</h4>
+                <p class="text-xs text-gray-600 sm:text-sm">
+                  World's most popular open source database
+                </p>
               </div>
 
               <!-- MongoDB Card -->
               <div
-                class="group rounded-xl border-2 border-green-100 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl"
+                class="group rounded-xl border-2 border-green-100 bg-white p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl sm:p-8"
               >
                 <div class="mb-4 flex justify-center">
                   <div
-                    class="rounded-full bg-green-50 p-4 transition-colors duration-300 group-hover:bg-green-100"
+                    class="rounded-full bg-green-50 p-3 transition-colors duration-300 group-hover:bg-green-100 sm:p-4"
                   >
-                    <img src="assets/mongodb.svg" class="h-12 w-12" alt="MongoDB" />
+                    <img src="assets/mongodb.svg" class="h-10 w-10 sm:h-12 sm:w-12" alt="MongoDB" />
                   </div>
                 </div>
-                <h4 class="mb-2 text-xl font-bold text-gray-900">MongoDB</h4>
-                <p class="text-sm text-gray-600">Leading modern NoSQL document database</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-900 sm:text-xl">MongoDB</h4>
+                <p class="text-xs text-gray-600 sm:text-sm">
+                  Leading modern NoSQL document database
+                </p>
               </div>
 
               <!-- ClickHouse Card -->
               <div
-                class="group rounded-xl border-2 border-yellow-100 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-yellow-300 hover:shadow-xl"
+                class="group rounded-xl border-2 border-yellow-100 bg-white p-6 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-yellow-300 hover:shadow-xl sm:p-8"
               >
                 <div class="mb-4 flex justify-center">
                   <div
-                    class="rounded-full bg-yellow-50 p-4 transition-colors duration-300 group-hover:bg-yellow-100"
+                    class="rounded-full bg-yellow-50 p-3 transition-colors duration-300 group-hover:bg-yellow-100 sm:p-4"
                   >
-                    <img src="assets/clickhouse.svg" class="h-12 w-12" alt="ClickHouse" />
+                    <img
+                      src="assets/clickhouse.svg"
+                      class="h-10 w-10 sm:h-12 sm:w-12"
+                      alt="ClickHouse"
+                    />
                   </div>
                 </div>
-                <h4 class="mb-2 text-xl font-bold text-gray-900">ClickHouse</h4>
-                <p class="text-sm text-gray-600">Fast open-source columnar database</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-900 sm:text-xl">ClickHouse</h4>
+                <p class="text-xs text-gray-600 sm:text-sm">Fast open-source columnar database</p>
               </div>
             </div>
           </div>
 
           <!-- Backup Features List -->
-          <div class="mt-[75px] w-[60%] p-8 pl-[100px]">
+          <div class="mt-8 w-full p-4 lg:mt-[75px] lg:w-[60%] lg:p-8 lg:pl-[100px]">
             <div
-              class="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-10 shadow-xl"
+              class="rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-6 shadow-xl lg:p-10"
             >
               <div
-                class="mb-3 inline-flex rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white"
+                class="mb-3 inline-flex rounded-full bg-blue-600 px-3 py-1 text-xs font-medium text-white lg:px-4 lg:py-1.5 lg:text-sm"
               >
                 Responsibility of Data Ox
               </div>
 
-              <h3 class="mb-8 text-2xl font-bold text-gray-900">Backup & Recovery options</h3>
+              <h3 class="mb-6 text-xl font-bold text-gray-900 lg:mb-8 lg:text-2xl">
+                Backup & Recovery options
+              </h3>
 
-              <div class="space-y-6">
+              <div class="space-y-4 lg:space-y-6">
                 <!-- Scheduled Backups -->
                 <div
-                  class="group flex items-start gap-5 rounded-2xl border border-transparent bg-white/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:bg-white/80 hover:shadow-lg"
+                  class="group rounded-2xl border border-transparent bg-white/60 p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:bg-white/80 hover:shadow-lg lg:p-6"
                 >
-                  <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
-                  >
-                    <svg
-                      class="h-6 w-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  <div class="mb-3 flex items-center justify-center lg:justify-start">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl lg:h-12 lg:w-12"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path>
-                    </svg>
+                      <svg
+                        class="h-5 w-5 text-white lg:h-6 lg:w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
-                  <div class="flex-1">
-                    <h4 class="mb-2 text-lg font-bold text-gray-900">Scheduled Daily Backups</h4>
-                    <p class="text-base leading-relaxed text-gray-600">
+                  <div class="text-center lg:text-left">
+                    <h4 class="mb-2 text-base font-bold text-gray-900 lg:text-lg">
+                      Scheduled Daily Backups
+                    </h4>
+                    <p class="text-sm leading-relaxed text-gray-600 lg:text-base">
                       Automated backups run at specified time every day when the load on your app is
                       minimal, ensuring zero disruption to your operations.
                     </p>
@@ -829,28 +866,32 @@
 
                 <!-- Cloud Storage -->
                 <div
-                  class="group flex items-start gap-5 rounded-2xl border border-transparent bg-white/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-200 hover:bg-white/80 hover:shadow-lg"
+                  class="group rounded-2xl border border-transparent bg-white/60 p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-200 hover:bg-white/80 hover:shadow-lg lg:p-6"
                 >
-                  <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
-                  >
-                    <svg
-                      class="h-6 w-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  <div class="mb-3 flex items-center justify-center lg:justify-start">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl lg:h-12 lg:w-12"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
-                      ></path>
-                    </svg>
+                      <svg
+                        class="h-5 w-5 text-white lg:h-6 lg:w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
-                  <div class="flex-1">
-                    <h4 class="mb-2 text-lg font-bold text-gray-900">Protected Cloud Storage</h4>
-                    <p class="text-base leading-relaxed text-gray-600">
+                  <div class="text-center lg:text-left">
+                    <h4 class="mb-2 text-base font-bold text-gray-900 lg:text-lg">
+                      Protected Cloud Storage
+                    </h4>
+                    <p class="text-sm leading-relaxed text-gray-600 lg:text-base">
                       All backups securely stored on Data Ox's encrypted cloud infrastructure with
                       military-grade security and redundancy.
                     </p>
@@ -859,29 +900,32 @@
 
                 <!-- One-Click Recovery -->
                 <div
-                  class="group flex items-start gap-5 rounded-2xl border border-transparent bg-white/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:bg-white/80 hover:shadow-lg"
+                  class="group rounded-2xl border border-transparent bg-white/60 p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-200 hover:bg-white/80 hover:shadow-lg lg:p-6"
                 >
-                  <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
-                  >
-                    <svg
-                      class="h-6 w-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  <div class="mb-3 flex items-center justify-center lg:justify-start">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl lg:h-12 lg:w-12"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      ></path>
-                    </svg>
+                      <svg
+                        class="h-5 w-5 text-white lg:h-6 lg:w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
-
-                  <div class="flex-1">
-                    <h4 class="mb-2 text-lg font-bold text-gray-900">One-Click Recovery</h4>
-                    <p class="text-base leading-relaxed text-gray-600">
+                  <div class="text-center lg:text-left">
+                    <h4 class="mb-2 text-base font-bold text-gray-900 lg:text-lg">
+                      One-Click Recovery
+                    </h4>
+                    <p class="text-sm leading-relaxed text-gray-600 lg:text-base">
                       Restore your data instantly with our intuitive interface or let our expert
                       support team handle the recovery process for you.
                     </p>
@@ -892,27 +936,29 @@
           </div>
         </div>
 
-        <div class="mx-auto mt-16 max-w-[1100px]">
-          <img src="assets/backups-dashboard.svg" />
+        <div class="mx-auto mt-8 max-w-full px-4 md:mt-16 md:max-w-[1100px] md:px-0">
+          <img src="assets/backups-dashboard.svg" class="h-auto w-full" alt="Backups Dashboard" />
         </div>
       </div>
     </div>
 
     <!-- Data Quality Monitoring Section -->
     <div id="data-quality" class="bg-gray-50 py-[100px]">
-      <div class="mx-auto w-full max-w-[1200px] px-6">
-        <div class="mb-16 text-center">
+      <div class="mx-auto w-full max-w-[1200px] px-4 md:px-6">
+        <div class="mb-8 text-center md:mb-16">
           <div class="flex justify-center">
-            <div class="mb-6 rounded-[20px] bg-blue-600 px-4 py-1 text-white">
+            <div
+              class="mb-4 rounded-[20px] bg-blue-600 px-4 py-1 text-sm text-white md:mb-6 md:text-base"
+            >
               Data Quality Monitoring
             </div>
           </div>
 
-          <h2 class="mx-auto mb-6 max-w-[650px] text-center text-4xl font-bold">
+          <h2 class="mx-auto mb-4 max-w-[650px] text-center text-2xl font-bold md:mb-6 md:text-4xl">
             Never miss critical data due to scraping website changes
           </h2>
 
-          <p class="mx-auto max-w-[650px] text-xl">
+          <p class="mx-auto max-w-[650px] text-base md:text-xl">
             DataOx continuously monitors your scraped data to verify that all important fields are
             present. When websites change their structure, we detect it immediately and prevent data
             losses before they impact your business.
@@ -921,60 +967,62 @@
 
         <!-- Key Benefits Stats -->
         <div
-          class="my-16 grid grid-cols-3 gap-8 rounded-[25px] border border-gray-50 bg-white p-12 text-center shadow-lg"
+          class="my-8 grid grid-cols-1 gap-6 rounded-[25px] border border-gray-50 bg-white p-6 text-center shadow-lg md:my-16 md:grid-cols-3 md:gap-8 md:p-12"
         >
           <div>
-            <div class="mb-2 text-4xl font-bold text-green-600">99.9%</div>
-            <div class="mx-auto max-w-[250px] text-center text-lg text-gray-600">
+            <div class="mb-2 text-3xl font-bold text-green-600 md:text-4xl">99.9%</div>
+            <div class="mx-auto max-w-[250px] text-center text-base text-gray-600 md:text-lg">
               data integrity maintained through proactive monitoring
             </div>
           </div>
 
           <div>
-            <div class="mb-2 text-4xl font-bold text-green-600">&lt; 5 min</div>
-            <div class="mx-auto max-w-[250px] text-center text-lg text-gray-600">
+            <div class="mb-2 text-3xl font-bold text-green-600 md:text-4xl">&lt; 5 min</div>
+            <div class="mx-auto max-w-[250px] text-center text-base text-gray-600 md:text-lg">
               average detection time for website structure changes
             </div>
           </div>
 
           <div>
-            <div class="mb-2 text-4xl font-bold text-green-600">24/7</div>
-            <div class="mx-auto max-w-[250px] text-center text-lg text-gray-600">
+            <div class="mb-2 text-3xl font-bold text-green-600 md:text-4xl">24/7</div>
+            <div class="mx-auto max-w-[250px] text-center text-base text-gray-600 md:text-lg">
               continuous monitoring and instant notifications
             </div>
           </div>
         </div>
 
         <!-- How Data Quality Monitoring Works -->
-        <div class="mb-20">
-          <h3 class="mb-12 text-center text-3xl font-bold text-gray-900">
+        <div class="mb-12 md:mb-20">
+          <h3 class="mb-8 text-center text-2xl font-bold text-gray-900 md:mb-12 md:text-3xl">
             How Data Quality Monitoring Works
           </h3>
 
           <!-- 3-Step Visual Process -->
-          <div class="grid grid-cols-3 gap-12">
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
             <!-- Step 1: Website Scraping -->
             <div class="text-center">
-              <div class="mb-6 flex justify-center">
-                <div class="relative rounded-2xl border-4 border-blue-200 bg-white p-4 shadow-xl">
+              <div class="mb-4 flex justify-center md:mb-6">
+                <div
+                  class="relative rounded-2xl border-4 border-blue-200 bg-white p-3 shadow-xl md:p-4"
+                >
                   <img
                     src="assets/data-quality-amazon.png"
-                    class="h-60 w-full rounded-xl object-cover"
+                    class="h-48 w-full rounded-xl object-cover md:h-60"
                     alt="Amazon page being scraped"
                   />
                   <div
-                    class="absolute -bottom-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white"
+                    class="absolute -bottom-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white md:-bottom-3 md:-right-3 md:h-8 md:w-8 md:text-sm"
                   >
                     1
                   </div>
                 </div>
               </div>
               <h4
-                class="mx-auto mb-3 h-14 max-w-[300px] text-center text-xl font-bold text-blue-600"
+                class="mx-auto mb-3 max-w-[300px] text-center text-lg font-bold text-blue-600 md:h-14 md:text-xl"
               >
                 When website is changed and the scraper is broken
               </h4>
-              <p class="text-gray-600">
+              <p class="text-sm text-gray-600 md:text-base">
                 DataOx continuously scrapes your target websites like Amazon, extracting product
                 information, prices, and other critical data points.
               </p>
@@ -982,26 +1030,28 @@
 
             <!-- Step 2: Data Analysis -->
             <div class="text-center">
-              <div class="mb-6 flex justify-center">
-                <div class="relative rounded-2xl border-4 border-red-200 bg-white p-4 shadow-xl">
+              <div class="mb-4 flex justify-center md:mb-6">
+                <div
+                  class="relative rounded-2xl border-4 border-red-200 bg-white p-3 shadow-xl md:p-4"
+                >
                   <img
                     src="assets/data-quality-code.svg"
-                    class="h-60 w-full"
+                    class="h-48 w-full md:h-60"
                     alt="JSON with missing fields marked in red"
                   />
                   <div
-                    class="absolute -bottom-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-bold text-white"
+                    class="absolute -bottom-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white md:-bottom-3 md:-right-3 md:h-8 md:w-8 md:text-sm"
                   >
                     2
                   </div>
                 </div>
               </div>
               <h4
-                class="mx-auto mb-3 h-14 max-w-[300px] text-center text-xl font-bold text-red-600"
+                class="mx-auto mb-3 max-w-[300px] text-center text-lg font-bold text-red-600 md:h-14 md:text-xl"
               >
                 We detect missing data
               </h4>
-              <p class="text-gray-600">
+              <p class="text-sm text-gray-600 md:text-base">
                 Our system analyzes the extracted data and immediately detects when important fields
                 are missing or corrupted due to website changes.
               </p>
@@ -1009,26 +1059,28 @@
 
             <!-- Step 3: Instant Alert -->
             <div class="text-center">
-              <div class="mb-6 flex justify-center">
-                <div class="relative rounded-2xl border-4 border-green-200 bg-white p-4 shadow-xl">
+              <div class="mb-4 flex justify-center md:mb-6">
+                <div
+                  class="relative rounded-2xl border-4 border-green-200 bg-white p-3 shadow-xl md:p-4"
+                >
                   <img
                     src="assets/data-quality-notifications.svg"
-                    class="h-60 w-full"
+                    class="h-48 w-full md:h-60"
                     alt="Slack notification about data missing"
                   />
                   <div
-                    class="absolute -bottom-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-green-600 text-sm font-bold text-white"
+                    class="absolute -bottom-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-600 text-xs font-bold text-white md:-bottom-3 md:-right-3 md:h-8 md:w-8 md:text-sm"
                   >
                     3
                   </div>
                 </div>
               </div>
               <h4
-                class="mx-auto mb-3 h-14 max-w-[250px] text-center text-xl font-bold text-green-600"
+                class="mx-auto mb-3 max-w-[250px] text-center text-lg font-bold text-green-600 md:h-14 md:text-xl"
               >
                 Notification sent to you and we start fixing
               </h4>
-              <p class="text-gray-600">
+              <p class="text-sm text-gray-600 md:text-base">
                 You and our team receive immediate Slack notifications when data issues are
                 detected, and we start fixing the problem right away.
               </p>
