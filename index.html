@@ -280,9 +280,10 @@
     </div>
 
     <div class="bg-gray-50 pb-[100px]">
+      <!-- Interactive Map - Hidden on Mobile -->
       <div
         id="map"
-        class="relative mx-auto h-[800px] w-[1200px] overflow-hidden rounded-lg bg-gray-50"
+        class="relative mx-auto hidden h-[800px] w-[1200px] overflow-hidden rounded-lg bg-gray-50 md:block"
       >
         <img
           src="assets/usa-down.svg"
@@ -297,6 +298,24 @@
         <div class="absolute left-0 top-0 z-20 h-full w-full bg-transparent"></div>
 
         <div class="absolute bottom-0 left-0 z-20 h-[100px] w-[100px] bg-gray-50"></div>
+      </div>
+
+      <!-- Map Images as Blocks - Visible on Mobile -->
+      <div class="mx-auto block max-w-[400px] space-y-6 px-6 md:hidden">
+        <div class="text-center">
+          <img
+            src="assets/usa-down.svg"
+            class="mx-auto w-full max-w-[300px]"
+            alt="USA Monitoring Status"
+          />
+        </div>
+        <div class="text-center">
+          <img
+            src="assets/italy-down.svg"
+            class="mx-auto w-full max-w-[300px]"
+            alt="Italy Monitoring Status"
+          />
+        </div>
       </div>
     </div>
 
@@ -533,7 +552,7 @@
       }); // end am5.ready()
     </script>
 
-    <div class="bg-gray-50 py-[50px] md:py-[100px]">
+    <div class="bg-gray-50 pb-[50px] md:py-[100px]">
       <div class="mx-auto max-w-[1200px] px-4 md:px-6">
         <div class="text-center text-xl font-bold md:text-3xl">
           What Data Ox takes care of in website availability?
