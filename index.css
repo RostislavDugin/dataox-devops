@@ -7,10 +7,12 @@
 body {
   font-family: 'Jost', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -32,4 +34,20 @@ input,
 textarea,
 select {
   font-family: inherit;
+}
+
+/* Prevent horizontal overflow on mobile */
+* {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure containers don't exceed viewport */
+.container,
+div {
+  box-sizing: border-box;
 }
